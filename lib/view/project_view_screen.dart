@@ -148,6 +148,7 @@ class _ProjectScreenView extends State<ProjectScreenView> {
                       Icons.business_center_outlined,
                       color: Colors.greenAccent,
                     ),
+
                     labelStyle:
                         TextStyle(color: Colors.white70.withOpacity(0.9)),
                     filled: true,
