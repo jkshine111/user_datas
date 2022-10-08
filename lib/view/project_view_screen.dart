@@ -5,15 +5,11 @@ import 'package:google_sign_in/google_sign_in.dart';
 
 import '../models/show_all_users.dart';
 import '../screens/signin_screen.dart';
-import '../services/userApi.dart';
 import '../utils/color_utils.dart';
 import 'admin_screen.dart';
 
 class ProjectScreenView extends StatefulWidget {
   final ShowAllUsers show_users;
-  // String userName;
-
-  // updateUserForm(this.userName);
 
   const ProjectScreenView(this.show_users, {Key? key}) : super(key: key);
 
@@ -148,11 +144,9 @@ class _ProjectScreenView extends State<ProjectScreenView> {
                       Icons.business_center_outlined,
                       color: Colors.greenAccent,
                     ),
-
                     labelStyle:
                         TextStyle(color: Colors.white70.withOpacity(0.9)),
                     filled: true,
-                    // floatingLabelBehavior: FloatingLabelBehavior.always,
                     floatingLabelBehavior: FloatingLabelBehavior.never,
                     fillColor: Colors.white.withOpacity(0.3),
                     border: OutlineInputBorder(
@@ -182,7 +176,6 @@ class _ProjectScreenView extends State<ProjectScreenView> {
                     labelStyle:
                         TextStyle(color: Colors.white70.withOpacity(0.9)),
                     filled: true,
-                    // floatingLabelBehavior: FloatingLabelBehavior.always,
                     floatingLabelBehavior: FloatingLabelBehavior.never,
                     fillColor: Colors.white.withOpacity(0.3),
                     border: OutlineInputBorder(
@@ -212,7 +205,6 @@ class _ProjectScreenView extends State<ProjectScreenView> {
                     labelStyle:
                         TextStyle(color: Colors.white70.withOpacity(0.9)),
                     filled: true,
-                    // floatingLabelBehavior: FloatingLabelBehavior.always,
                     floatingLabelBehavior: FloatingLabelBehavior.never,
                     fillColor: Colors.white.withOpacity(0.3),
                     border: OutlineInputBorder(
@@ -231,7 +223,7 @@ class _ProjectScreenView extends State<ProjectScreenView> {
               ),
               TextButton(
                 onPressed: () {
-                  print('Bio Submit');
+                  print('Project Submit');
                   // Navigator.of()
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => AdminScreen()));
@@ -244,7 +236,6 @@ class _ProjectScreenView extends State<ProjectScreenView> {
                       side: BorderSide(color: Colors.white70),
                     ),
                   ),
-                  // side: BorderSide(color: Colors.white70),
                 ),
                 child: const Text(
                   '    Submit    ',

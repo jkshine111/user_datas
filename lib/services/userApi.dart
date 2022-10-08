@@ -9,6 +9,7 @@ class UserApi {
     // http://127.0.0.1:5001/show_all_users
     // var uri = Uri.parse("http://10.0.2.2:5001/show_all_users");
     var uri = Uri.parse("https://jsonplaceholder.typicode.com/users");
+    // var uri = Uri.parse("https://randomuser.me/api");
     var response = await client.get(uri);
     if (response.statusCode == 200) {
       var json = response.body;

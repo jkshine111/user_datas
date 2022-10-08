@@ -102,7 +102,6 @@ class _BioViewScreen extends State<BioViewScreen> {
                     labelStyle:
                         TextStyle(color: Colors.white70.withOpacity(0.9)),
                     filled: true,
-                    // floatingLabelBehavior: FloatingLabelBehavior.always,
                     floatingLabelBehavior: FloatingLabelBehavior.never,
                     fillColor: Colors.white.withOpacity(0.3),
                     border: OutlineInputBorder(
@@ -130,7 +129,6 @@ class _BioViewScreen extends State<BioViewScreen> {
                   ),
                   labelStyle: TextStyle(color: Colors.white70.withOpacity(0.9)),
                   filled: true,
-                  // floatingLabelBehavior: FloatingLabelBehavior.always,
                   floatingLabelBehavior: FloatingLabelBehavior.never,
                   fillColor: Colors.white.withOpacity(0.3),
                   border: OutlineInputBorder(

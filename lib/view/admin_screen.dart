@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:user_datas/models/show_all_users.dart';
+import 'package:user_datas/view/random_users.dart';
 import '../services/userApi.dart';
 import '../utils/color_utils.dart';
 import 'bio_screen.dart';
@@ -104,6 +105,19 @@ class _HomeState extends State<AdminScreen> {
                 });
               },
             ),
+            RadioListTile(
+              title: Text(
+                "Random Users",
+                style: TextStyle(color: Colors.white70, fontSize: 18.0),
+              ),
+              value: "random_users",
+              groupValue: gender,
+              onChanged: (value) {
+                setState(() {
+                  gender = value.toString();
+                });
+              },
+            ),
             SizedBox(
               height: 30,
             ),
@@ -138,10 +152,18 @@ class _HomeState extends State<AdminScreen> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                // builder: (context) =>updateUserForm(),
                                 builder: (context) => ProjectScreen(),
                               ),
                             );
+                          } else if (gender == 'random_users') {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => RandomUsers(),
+                              ),
+                            );
+                          } else {
+                            print('no datas');
                           }
                           ;
                         },

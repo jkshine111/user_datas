@@ -111,7 +111,6 @@ class _SignInScreenState extends State<SignInScreen> {
                   height: 30,
                 ),
                 SignInButton(
-                  // Buttons.Google,
                   Buttons.Google,
                   text: "Sign up with Google",
                   onPressed: () {
@@ -119,7 +118,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     Navigator.push(
                         context,
                         // google sign in
-                        MaterialPageRoute(builder: (context) => _HomeState()));
+                        MaterialPageRoute(builder: (context) => GoogleLogin()));
                   },
                 ),
                 SizedBox(
@@ -161,14 +160,14 @@ class _SignInScreenState extends State<SignInScreen> {
   }
 }
 
-class _HomeState extends StatefulWidget {
+class GoogleLogin extends StatefulWidget {
   @override
-  State<_HomeState> createState() => _HomeStateState();
+  State<GoogleLogin> createState() => _GoogleLogin();
 }
 
-class _HomeStateState extends State<_HomeState> {
+class _GoogleLogin extends State<GoogleLogin> {
   @override
-  _HomeState createState() => _HomeState();
+  GoogleLogin createState() => GoogleLogin();
 
   final GoogleSignIn _googleSignIn = GoogleSignIn(scopes: ['email']);
   GoogleSignInAccount? _currentUser;
@@ -225,9 +224,6 @@ class _HomeStateState extends State<_HomeState> {
               hexStringToColor("9546C4"),
               hexStringToColor("5E61F4"),
               hexStringToColor("9546C4"),
-              // hexStringToColor("CB2B93"),
-              // hexStringToColor("9546C4"),
-              // hexStringToColor("5E61F4")
             ],
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
@@ -264,7 +260,6 @@ class _HomeStateState extends State<_HomeState> {
                         context,
                         // Todo Page
                         MaterialPageRoute(builder: (context) => AdminScreen()));
-                    // MaterialPageRoute(builder: (context) => MyHomePage()));
                     // MaterialPageRoute(
                     //     builder: (context) => CurrentLocationScreen()));
                   },
